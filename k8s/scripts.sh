@@ -11,8 +11,11 @@ yum -y install docker etcd
 systemctl start docker
 systemctl enable docker
 
-systemctl start etcd
-systemctl enable etcd
+systemctl start kubelet.service
+systemctl enable kubelet.service
+
+# systemctl start etcd
+# systemctl enable etcd
 
 systemctl top firewalld
 systemctl disable firewalld
